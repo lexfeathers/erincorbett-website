@@ -13,7 +13,7 @@ build:
     rm -r "{{ PAGES_DIR }}"/*
     echo "Pages folder cleaned"
     yarn build
-    cp -R "{{ BUILD_DIR }}/*" "{{ PAGES_DIR }}"
+    cp -R "{{ BUILD_DIR }}"/* "{{ PAGES_DIR }}"
     echo "Copied built files into {{ BUILD_DIR }}"
     cp "{{ justfile_directory() }}/.domains" "{{ PAGES_DIR }}"
     cd "{{ PAGES_DIR }}"
