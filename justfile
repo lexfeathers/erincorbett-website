@@ -3,7 +3,7 @@ BUILD_DIR := justfile_directory() + "/dist"
 
 build:
     #!/usr/bin/env bash
-    date=$(date -Is)
+    date=$(date -Iseconds)
     cd "{{ justfile_directory() }}"
     pwd
     # DELETE BUILD FOLDER
