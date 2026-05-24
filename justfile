@@ -7,10 +7,10 @@ build:
     cd "{{ justfile_directory() }}"
     pwd
     # DELETE BUILD FOLDER
-    rm -rf "{{ BUILD_DIR }}"
-    echo "Build folder deleted"
+    # rm -rf "{{ BUILD_DIR }}"
+    # echo "Build folder deleted"
     # DELETE EVERYTHING IN PAGES FOLDER
-    rm -r "{{ PAGES_DIR }}/*"
+    rm -r "{{ PAGES_DIR }}"
     echo "Pages folder cleaned"
     yarn build
     cp -R "{{ BUILD_DIR }}/*" "{{ PAGES_DIR }}"
