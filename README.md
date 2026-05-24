@@ -4,6 +4,9 @@
 - Only render nav blog link if there are posts
 
 # To run locally:
+
+(Make sure you have Node.js installed)
+
 ```sh
 yarn run dev
 ```
