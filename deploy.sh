@@ -1,29 +1,41 @@
 #!/usr/bin/env bash
-SCRIPT_DIR=$(dirname "$0")
-date=$(date -Iseconds)
+
+# Fail on error and echo commands to console
 set -ex
 
+# Set up vars
+SCRIPT_DIR=$(dirname "$0")
+date=$(date -Iseconds)
+
 # Move into project directory
-cd "$SCRIPT_DIR" && echo $SCRIPT_DIR
+cd $SCRIPT_DIR
 pwd
+
 # DELETE BUILD FOLDER
-rm -rf "dist/"
-echo "dist folder deleted"
-# DELETE EVERYTHING IN PAGES FOLDER
-ls build | xargs -I{} rm -rf build/{}
-echo "Build folder cleaned"
-# Build the Astro site
-yarn build 
-cp -R "dist/*" "build/"
-echo "Copied built files into build"
-cp ".domains" "build/"
-cd "build"
-git add -A
+rm -rf dist
+
+# Build the thing
+yarn build
+
+# Copy git submodule files
+cp build/.{git,gitignore,domains} dist/
+
+# Obliterate old build
+rm -rf build
+
+# Move recently built folder into place as new copy of submodule
+mv dist build
+
+# Copy domains config from root
+cp .domains build/.domains
+
+# Commit Dance for pages branch
+cd $SCRIPT_DIR/build
+git add .
 git commit -m "Rebuild: $date"
 git push
-cd ..
-rm -rf "dist/"
-echo "Deleted dist folder"
-git add -A
-git commit -am "Pages update: $date"
-git push
+cd $SCRIPT_DIR
+
+# Share status message
+echo "Build $date pushed on branch pages. Please stage and commit local changes"
+echo "If everything looks correct."
