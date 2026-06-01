@@ -21,7 +21,7 @@ With npm:
 npm run dev
 ```
 
-# Development:
+# Deploy to Codeberg pages:
 
 - Make your changes, and ensure you are checked into the root of the repo
 - run `./deploy.sh`
