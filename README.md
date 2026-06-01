@@ -1,27 +1,32 @@
-# Features To do:
-- Featured/latest project on homepage
-- Latest post(s), if there are posts
-- Only render nav blog link if there are posts
+# Dependencies:
+
+- [Node.js](https://nodejs.org/en)
+
+# Getting started:
+
+- If you're cloning this repo for the first time, use `git clone --recursive ssh://git@codeberg.org/erincorbettmusic/pages.git erincorbettmusic.com` as your clone command
+- cd into the repo folder
+- run `yarn install`, or if you don't have yarn, `npm install` to install Astro's required packages
+- If changes have been made by another contributor, run `git pull` and then `git submodule update --remote build` to update the build submodule
 
 # To run locally:
 
-(Make sure you have Node.js installed)
-
+With yarn:
 ```sh
 yarn run dev
 ```
 
-# Astro Starter Kit: Minimal
-
+With npm:
 ```sh
-yarn create astro@latest -- --template minimal
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+# Development:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Make your changes, and ensure you are checked into the root of the repo
+- run `./deploy.sh`
+- The script will move the build site files into `build/` and push them to the `pages` branch of the codeberg repo, updating the site.
+- If everything looks good, commit and push the changes in the project root on the `main` branch.
 
 ## 🚀 Project Structure
 
@@ -29,6 +34,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
+├── build/ => the folder that codeberg pages uses to run your actual website
 ├── public/
 │   └── images/ => Put all images in this directory
 ├── src/
