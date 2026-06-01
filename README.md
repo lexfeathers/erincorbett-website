@@ -1,8 +1,8 @@
-# Dependencies:
-
-- [Node.js](https://nodejs.org/en)
 
 # Getting started:
+
+## Dependencies:
+- [Node.js](https://nodejs.org/en)
 
 - If you're cloning this repo for the first time, use `git clone --recursive ssh://git@codeberg.org/erincorbettmusic/pages.git erincorbettmusic.com` as your clone command
 - cd into the repo folder
@@ -10,7 +10,6 @@
 - If changes have been made by another contributor, run `git pull` and then `git submodule update --remote build` to update the build submodule
 
 # To run locally:
-
 With yarn:
 ```sh
 yarn run dev
