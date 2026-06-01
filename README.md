@@ -7,7 +7,8 @@
 
 ## Steps:
 
-- If you're cloning this repo for the first time, use `git clone --recursive ssh://git@codeberg.org/erincorbettmusic/pages.git erincorbettmusic.com` as your clone command
+- [Make sure](https://docs.codeberg.org/security/ssh-key/#generating-an-ssh-key-pair) you have an SSH key pair [set up for codeberg](https://docs.codeberg.org/security/ssh-key/#add-the-ssh-key-to-codeberg)
+- If you're cloning this repo for the first time, use `git clone --recursive ssh://git@codeberg.org/erincorbettmusic/pages.git erincorbettmusic.com` as your clone command 
 - cd into the repo folder
 - run `yarn install`, or if you don't have yarn, `npm install` to install Astro's required packages
 - If changes have been made by another contributor, run `git pull` and then `git submodule update --remote build` to update the build submodule
