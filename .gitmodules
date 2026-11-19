@@ -1,4 +1,0 @@
-[submodule "build"]
-	path = build
-	url = ssh://git@codeberg.org/erincorbettmusic/pages.git
-	branch = pages
