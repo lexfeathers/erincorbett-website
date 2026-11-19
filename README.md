@@ -11,6 +11,7 @@
 - cd into the repo folder
 - run `yarn install`, or if you don't have yarn, `npm install` to install Astro's required packages
 - If changes have been made by another contributor, run `git pull`
+- To deploy, `git push` your changes to the repo, and the deploy.yml action will run.
 
 # To run locally:
 
