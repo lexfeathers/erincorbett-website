@@ -199,6 +199,10 @@ img {
 #logo {
     color: var(--color-text);
     text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
 }
 
 :focus {
