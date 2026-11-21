@@ -564,6 +564,10 @@ iframe[title="YouTube video player"]{
 	justify-content: flex-start;
 }
 
+.section-component {
+  margin: 1rem 0;
+}
+
 /* Desktop */
 @media screen and (min-width: 1200px) {
 	:root {
