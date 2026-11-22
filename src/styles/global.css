@@ -320,8 +320,8 @@ ul:has(.tag) {
 }
 
 ::selection {
-    background-color: var(--color-text);
-    color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-background);
 }
 
 /* Grid! */
